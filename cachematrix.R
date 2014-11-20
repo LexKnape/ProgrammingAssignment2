@@ -25,8 +25,17 @@ getmatrix=getmatrix)
 
 cacheSolve <- function(x=matrix(), ...) {
 m<-x$getmatrix()
-is(!is.null(m)){
-message ("getting cached data"
+if(!is.null(m)){
+message ("getting cached data")
+return(m)
+}
+matrix <-x$get()
+m <- solve(matrix, ...)
+x$setmatrix(m)
+m
+}
+
+
 
 
         ## Return a matrix that is the inverse of 'x'
