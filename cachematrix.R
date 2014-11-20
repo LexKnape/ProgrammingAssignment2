@@ -16,25 +16,25 @@ x<<-y
 m <<-NULL
 }
 get  <-function() x
-setmatrix <-function(solve) m <<-solve
-getmatrix <-function() m
+setinversematrix <-function(solve) m <<-solve
+getinversematrix <-function() m
 list(set=set, get=get,
-setmatrix=setmatrix,
-getmatrix=getmatrix)
+setinversematrix=setinversematrix,
+getinversematrix=getinversematrix)
 }
 
 
 ## The second function: cacheSolve.
 
-cacheSolve <- function(x=matrix(), ...) {
-m<-x$getmatrix()
+cacheSolve <- function(x, ...) {
+m <-x$getinversematrix()
 if(!is.null(m)){
 message ("getting cached data")
 return(m)
 }
 matrix <-x$get()
 m <- solve(matrix, ...)
-x$setmatrix(m)
+x$setinversematrix(m)
 m
 }
 
