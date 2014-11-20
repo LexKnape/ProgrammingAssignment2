@@ -24,9 +24,6 @@ getmatrix=getmatrix)
 }
 
 
-
-
-
 ## The second function: cacheSolve.
 
 cacheSolve <- function(x=matrix(), ...) {
