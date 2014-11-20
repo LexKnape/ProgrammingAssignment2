@@ -12,12 +12,22 @@ m <<-NULL
 get  <-function() x
 setmatrix <-function(solve) m <<-solve
 getmatrix <-function() m
+list(set=set, get=get,
+setmatrix=setmatrix,
+getmatrix=getmatrix)
+}
+
 
 
 
 
 ## Write a short comment describing this function
 
-cacheSolve <- function(x, ...) {
+cacheSolve <- function(x=matrix(), ...) {
+m<-x$getmatrix()
+is(!is.null(m)){
+message ("getting cached data"
+
+
         ## Return a matrix that is the inverse of 'x'
 }
