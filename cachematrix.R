@@ -38,8 +38,24 @@ cacheSolve <- function(x, ...) {
         m
 }
 
+##  Return a matrix that is the inverse of 'x'
 
+## x =rbind(c(1, -1/6), c(-1/6, 1)
+## r =makeCacheMatrix(x) 
+## r$get
 
+## First Run so no cache data
 
-        ## Return a matrix that is the inverse of 'x'
+## > cacheSolve(r)
+##           [,1]      [,2]
+## [1,] 1.0285714 0.1714286
+## [2,] 0.1714286 1.0285714
+
+## Second Run gat getting data from cache with text 
+
+## > cacheSolve(r)
+## getting cached data
+##           [,1]      [,2]
+## [1,] 1.0285714 0.1714286
+## [2,] 0.1714286 1.0285714
 
